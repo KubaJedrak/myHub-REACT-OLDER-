@@ -1,0 +1,212 @@
+{
+  "recipes": [
+    {
+      "name": "Turkey Burgers",
+      "imgURL": "https://michalwrzosek.pl/wp-content/uploads/2019/02/burger-bok.png",
+      "description": "Delicious burgers with turkey meat, avocado, carrots and white cabbage.",
+      "ingredients": [
+        {
+          "ingredName": "turkey meat",
+          "unit": "grams",
+          "weight": 100,
+          "count": 0
+        },
+        {
+          "ingredName": "chilli peppers",
+          "unit": "grams",
+          "weight": 5,
+          "count": 0
+        },
+        {
+          "ingredName": "garlic",
+          "unit": "grams",
+          "weight": 4,
+          "count": 0
+        },
+        {
+          "ingredName": "ginger",
+          "unit": "grams",
+          "weight": 5,
+          "count": 0
+        },
+        {
+          "ingredName": "soy sauce",
+          "unit": "grams",
+          "weight": 2.5,
+          "count": 0
+        },
+        {
+          "ingredName": "olive oil",
+          "unit": "grams",
+          "weight": 1.3,
+          "count": 0
+        },
+        {
+          "ingredName": "salt",
+          "unit": "grams",
+          "weight": 1,
+          "count": 0
+        },
+        {
+          "ingredName": "pepper",
+          "unit": "grams",
+          "weight": 1,
+          "count": 0
+        },
+        {
+          "ingredName": "white cabbage",
+          "unit": "grams",
+          "weight": 75,
+          "count": 0
+        },
+        {
+          "ingredName": "carrots",
+          "unit": "grams",
+          "weight": 25,
+          "count": 0
+        },
+        {
+          "ingredName": "natural yoghurt",
+          "unit": "grams",
+          "weight": 15,
+          "count": 0
+        },
+        {
+          "ingredName": "spicy sauce",
+          "unit": "grams",
+          "weight": 2.5,
+          "count": 0
+        },
+        {
+          "ingredName": "parsley leaves",
+          "unit": "grams",
+          "weight": 1.3,
+          "count": 0
+        },
+        {
+          "ingredName": "honey",
+          "unit": "grams",
+          "weight": 1.3,
+          "count": 0
+        },
+        {
+          "ingredName": "avocado",
+          "unit": "grams",
+          "weight": 75,
+          "count": 0
+        },
+        {
+          "ingredName": "lime juice",
+          "unit": "grams",
+          "weight": 7.5,
+          "count": 0
+        },
+        {
+          "ingredName": "",
+          "unit": "units",
+          "weight": 0,
+          "count": 1
+        }
+      ],
+      "instructions": [
+        "Add and mix together: say sauce, meat, olive oil chopped ginger, garlic, chilli, salt and pepper.",
+        "Form patties and fry for 5 minutes on each side",
+        "Grind cabbage and carrots, add in yoghurt, spicy sauce, chopped parsley leaves, honey, salt and pepper",
+        "Peel the avocado and mash it, add lime juice",
+        "Enjoy!"
+      ],
+      "id": 1
+    },
+    {
+      "name": "Rice & Broccoli Cutlets",
+      "imgURL": "https://michalwrzosek.pl/wp-content/uploads/2018/02/krokietybok.png",
+      "description": "Delicious cutlets with rice, broccoli, sesame and mozzarella.",
+      "ingredients": [
+        {
+          "ingredName": "broccoli",
+          "unit": "grams",
+          "weight": 160,
+          "count": 0
+        },
+        {
+          "ingredName": "rice (or millet)",
+          "unit": "grams",
+          "weight": 50,
+          "count": 0
+        },
+        {
+          "ingredName": "olive oil",
+          "unit": "grams",
+          "weight": 10,
+          "count": 0
+        },
+        {
+          "ingredName": "onion",
+          "unit": "grams",
+          "weight": 20,
+          "count": 0
+        },
+        {
+          "ingredName": "garlic",
+          "unit": "grams",
+          "weight": 4,
+          "count": 0
+        },
+        {
+          "ingredName": "mozzarella",
+          "unit": "grams",
+          "weight": 17,
+          "count": 0
+        },
+        {
+          "ingredName": "chilli peppers",
+          "unit": "grams",
+          "weight": 3.5,
+          "count": 0
+        },
+        {
+          "ingredName": "sesame",
+          "unit": "grams",
+          "weight": 7,
+          "count": 0
+        },
+        {
+          "ingredName": "eggs",
+          "unit": "grams",
+          "weight": 0,
+          "count": 1
+        },
+        {
+          "ingredName": "salt",
+          "unit": "grams",
+          "weight": 1,
+          "count": 0
+        },
+        {
+          "ingredName": "pepper",
+          "unit": "grams",
+          "weight": 1,
+          "count": 0
+        },
+        {
+          "ingredName": "parsley leaves",
+          "unit": "grams",
+          "weight": 3.5,
+          "count": 0
+        }
+      ],
+      "instructions": [
+        "LATER"
+      ],
+      "id": 2
+    },
+    {
+      "name": "Chicken Fajita",
+      "imgURL": "https://michalwrzosek.pl/wp-content/uploads/2017/12/kurczak-patelnia1-male.png",
+      "description": "Delicious Chicken Fajita with onion, red & yellow peppers and lime",
+      "ingredients": "LATER",
+      "instructions": "LATER",
+      "id": 3
+    }
+  ]
+}

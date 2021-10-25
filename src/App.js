@@ -32,13 +32,13 @@ const theme = createTheme({
     fontFamily: 'Quicksand',
   },
   components: {
-    MuiButton: {
-      styleOverrides: {
-        root: {
-          backgroundColor: "#ffd600"
-        }
-      }
-    },
+    // MuiButton: {
+    //   styleOverrides: {
+    //     root: {
+    //       backgroundColor: "#ffd600"
+    //     }
+    //   }
+    // },
     MuiBottomNavigation: {
       styleOverrides: {
         root: {
@@ -60,16 +60,16 @@ function App() {
   return (
     <ThemeProvider theme={theme}>
       <Router>
-        <Container sx={{minHeight: "100vh", margin: 0, display: "flex", justifyContent: "center"}} className="App">
+        <Container sx={{minWidth: "100vw", minHeight: "100vh", margin: 0, display: "flex", justifyContent: "center"}} className="App">
 
             {/* <WeatherBar />     */}
 
-            <Container sx={{width: 0.9, height: 0.9}} align="center">
+            <Container sx={{width: 1, height: 1, minHeight: "100vh"}} align="center">
               <Switch>
                 <Route exact path="/">
                   <Typography variant="h2" sx={{margin: 0}}>Home</Typography>
                 </Route>
-                <Route path="/recipes">
+                <Route exact path="/recipes">
                   <Recipes />
                 </Route>
                 <Route path="/recipes/:id">

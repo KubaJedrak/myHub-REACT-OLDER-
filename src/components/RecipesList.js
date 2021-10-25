@@ -1,12 +1,11 @@
-import { Button, Card, CardContent, CardMedia, Container, Stack, Typography } from "@mui/material"
+import { Button, Card, CardContent, CardMedia, Typography } from "@mui/material"
 import { Link } from "react-router-dom"
 import { Box } from "@mui/system"
-import AddIcon from '@mui/icons-material/Add';
 
 const RecipesList = ({ recipes }) => {
 
   return (
-    <Box sx={{minHeight: "100vh", width: 1, margin: 0, alignSelf: "center", display: "flex", flexWrap: "wrap", alignItems: "center", justifyContent: "center"}}>
+    <Box sx={{ width: 1, margin: 0, alignSelf: "center", display: "flex", flexWrap: "wrap", alignItems: "center", justifyContent: "center"}}>
       {recipes.map( recipe => (
         <Card key={recipe.id} component={Link} to={`/recipes/${recipe.id}`} sx={{margin: "10px auto 20px", textDecoration: "none"}}>
           <CardMedia

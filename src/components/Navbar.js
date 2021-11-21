@@ -10,19 +10,12 @@ import HomeIcon from '@mui/icons-material/Home';
 
 import '../styles/BottomNav.css'  // LOADS ONLY ONCE WTH?
 
-//       <Link className="navbar-link" to="/recipes">
-//         <div className="navbar-position-container">
-//           <FastfoodIcon pallete="secondary" />
-//           <p className="navbar-icon-label">Recipes</p>
-//         </div>
-//       </Link>
-
 const Navbar = () => {
   return (
     <BottomNavigation
       showLabels
       sx={{
-        borderRadius: 3,
+        borderRadius: 1,
         position: "fixed",
         bottom: "2vh",
         alignSelf: "center",

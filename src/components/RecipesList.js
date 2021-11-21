@@ -29,7 +29,8 @@ const RecipesList = ({ recipes }) => {
         color="secondary" 
         component={Link}
         to="/create-recipe"
-        sx={{alignSelf: "center", justifySelf: "center", marginBottom: "100px"}}>Add a Recipe</Button>
+        sx={{alignSelf: "center", justifySelf: "center", marginBottom: "100px"}}>Add a Recipe
+      </Button>
     </Box>
   )
 }

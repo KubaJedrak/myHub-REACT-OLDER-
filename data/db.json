@@ -179,5 +179,21 @@
       "instructions": "LATER",
       "id": 3
     }
+  ],
+  "to-do": [
+    {
+      "id": 1221,
+      "name": "Create SkyNet",
+      "status": true
+    },
+    {
+      "id": 2221,
+      "name": "Kill SkyNet",
+      "status": true
+    },
+    {"id": 3212,
+    "name": "Revive SkyNet",
+    "status": false
+    }
   ]
 }

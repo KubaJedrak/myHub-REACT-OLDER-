@@ -1,6 +1,7 @@
 import useFetch from '../hooks/useFetch'
 import { useHistory, useParams } from 'react-router-dom'
 import { Container, Card, CardMedia, CircularProgress, CardContent, Typography, List, ListItem, ListItemText, Button } from '@mui/material';
+import capitalizeFirstLetter from './functionalComponents/stringModifications';
 
 import DeleteIcon from '@mui/icons-material/Delete';
 import AddShoppingCartIcon from '@mui/icons-material/AddShoppingCart';
@@ -33,7 +34,7 @@ const RecipeDetails = () => {
             <List dense sx={{ display: "flex", flexWrap: "wrap", flexDirection: "row", marginRight: "auto"}} disablePadding>
               {recipe.ingredients.map( ingredient => (
                 <ListItem disablePadding>
-                  <ListItemText key={ingredient.id} primary={`${ingredient.ingredName} (${ingredient.count})`} sx={{fontSize: 0.75}} />
+                  <ListItemText key={ingredient.id} primary={`${capitalizeFirstLetter(ingredient.ingredName)} (${ingredient.count})`} sx={{fontSize: 0.75}} />
                 </ListItem>
               ))}
             </List>

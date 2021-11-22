@@ -195,5 +195,25 @@
     "name": "Revive SkyNet",
     "status": false
     }
+  ],
+  "shopping": [
+    {
+      "id": 1111,
+      "name": "potatoes",
+      "count": "1000g",
+      "status": true
+    },
+    {
+      "id": 1121,
+      "name": "chicken",
+      "count": "500g",
+      "status": true
+    },
+    {
+      "id": 1112,
+      "name": "garlic",
+      "count": "2",
+      "status": true
+    }
   ]
 }

@@ -13,7 +13,7 @@ import TopBar from './components/TopBar';
 import Home from './components/Home';
 
 import Leaves from './images/leaves.jpeg'
-import ShoppingList from './components/ShoppingList';
+import Shopping from './components/Shopping';
 
 const theme = createTheme({
   palette: {
@@ -123,7 +123,7 @@ function App() {
                   <CreateRecipe />
               </Route>
               <Route path="/shopping">
-                <ShoppingList componentTitle="Shopping List" />
+                <Shopping componentTitle="Shopping List" />
               </Route>
               <Route path="/todo-list">
                 <ToDo componentTitle="To-Do List" />

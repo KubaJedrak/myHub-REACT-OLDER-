@@ -1,6 +1,7 @@
 import { Container, TextField, Typography, List, ListItem, ListItemText, InputLabel, Select, MenuItem, Button, Divider } from "@mui/material"
 import { Box } from "@mui/system"
 import { useState } from 'react'
+import capitalizeFirstLetter from './functionalComponents/stringModifications'
 
 const CreateRecipe = () => {
 
@@ -13,6 +14,7 @@ const CreateRecipe = () => {
   }
 
   const [name, setName] = useState("")
+  const [description, setDescription] = useState("")
   const [url, setURL] = useState("")
   const [ingredient, setIngredient] = useState("")
   const [weight, setWeight] = useState(0)
@@ -24,6 +26,10 @@ const CreateRecipe = () => {
   const handleName = (event) => {
     setName(event.target.value);
   };
+
+  const handleDescription = (event) => {
+    setDescription(event.target.value)
+  }
 
   const handleURL = (event) => {
     setURL(event.target.value);
@@ -45,7 +51,7 @@ const CreateRecipe = () => {
   const addIngredient = (event) => {
     event.preventDefault()
     setIngredients([...ingredients, {
-      ingredName: ingredient,
+      ingredName: ingredient.toLowerCase(),
       count: `${weight}${unitType}`,
       id: Math.round(Math.random() * 1000)
     }])
@@ -53,7 +59,7 @@ const CreateRecipe = () => {
   }
 
   const addInstruction = (event) => {
-    setInstruction(event.target.value)
+    setInstruction(capitalizeFirstLetter(event.target.value))
   }
 
   const addInstructions = (event) => {
@@ -67,7 +73,7 @@ const CreateRecipe = () => {
     newRecipe = {
       name: name,
       imgURL: url,
-      description: "",
+      description: description,
       ingredients: ingredients,
       instructions: instructions
     }
@@ -92,9 +98,6 @@ const CreateRecipe = () => {
       ingredients: [],
       instructions: []
     }
-
-    console.log(newRecipe)
-
   }
 
   return (
@@ -116,12 +119,17 @@ const CreateRecipe = () => {
         }}
       >
         <Typography variant="body1">Add Name and Picture</Typography>
-        <TextField id="newRecipe-name" label="Recipe Name" variant="outlined" onChange={handleName} sx={{
+        <TextField id="newRecipe-name" label="Recipe Name" variant="outlined" onChange={handleName} value={name} sx={{
           width: "50vw",
           margin: "10px auto",
 
         }} required />
-        <TextField id="newRecipe-img-url" label="Recipe Image Address" onChange={handleURL} variant="outlined" sx={{
+        <TextField id="newRecipe-description" label="Description" variant="outlined" onChange={handleDescription} value={description} sx={{
+          width: "50vw",
+          margin: "10px auto",
+
+        }} required />
+        <TextField id="newRecipe-img-url" label="Recipe Image Address" onChange={handleURL} value={url} variant="outlined" sx={{
           width: "50vw",
           margin: "10px auto"
         }} required />             

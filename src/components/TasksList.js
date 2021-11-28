@@ -1,5 +1,5 @@
 
-import { Button, Divider, List, ListItem, ListItemText, TextField, Typography } from "@mui/material"
+import { Button, Divider, List, ListItem, TextField, Typography } from "@mui/material"
 import { Box } from "@mui/system"
 import { useState } from "react"
 import AddIcon from '@mui/icons-material/Add';
@@ -20,15 +20,11 @@ const TaskList = ({ tasks }) => {
   })
 
   const handleClick = (e) => {
-    console.log(e.target.style)
-
     if (e.target.style.textDecoration === "line-through") { // this order works, the reverse doesnt work at first click, DO NOT CHANGE
       e.target.style.setProperty("text-decoration", "none")
     } else {
       e.target.style.setProperty("text-decoration", "line-through")
     }
-
-    console.log(e.target.style)
   }
 
   const handleChange = (e) => {

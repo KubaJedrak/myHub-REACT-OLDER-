@@ -50,7 +50,6 @@ const ShoppingList = ({shopping}) => {
     setShoppingArr([...shoppingArr, newItem])
     setName("")
     setCount("")
-    console.log(shoppingArr)
   }
 
   const handleDelete = (id) => {

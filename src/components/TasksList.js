@@ -19,6 +19,18 @@ const TaskList = ({ tasks }) => {
     status: false
   })
 
+  const handleClick = (e) => {
+    console.log(e.target.style)
+
+    if (e.target.style.textDecoration === "line-through") { // this order works, the reverse doesnt work at first click, DO NOT CHANGE
+      e.target.style.setProperty("text-decoration", "none")
+    } else {
+      e.target.style.setProperty("text-decoration", "line-through")
+    }
+
+    console.log(e.target.style)
+  }
+
   const handleChange = (e) => {
     e.preventDefault()
     setNewTask({
@@ -73,7 +85,7 @@ const TaskList = ({ tasks }) => {
               padding: "2px 0px"
             }}
             >
-              <Typography sx={{padding: "6px 16px"}}>
+              <Typography sx={{padding: "6px 16px"}} onClick={handleClick}>
                 {task.name}
               </Typography>
               <Button sx={{borderRadius: "50%"}} onClick={() => handleDelete(task.id)}><DeleteIcon /></Button>

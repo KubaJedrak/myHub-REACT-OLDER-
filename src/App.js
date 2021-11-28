@@ -12,7 +12,7 @@ import { Container, Typography } from '@mui/material';
 import TopBar from './components/TopBar';
 import Home from './components/Home';
 
-import Leaves from './images/leaves.jpeg'
+// import Leaves from './images/leaves.jpeg'
 import Shopping from './components/Shopping';
 
 const theme = createTheme({

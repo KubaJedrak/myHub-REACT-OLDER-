@@ -1,48 +1,62 @@
 import { Button, Container, Divider, List, ListItem, TextField, Typography, Select, MenuItem } from '@mui/material';
 import { Box } from '@mui/system';
-import Title from "./ComponentTitle";
 import { useState } from 'react';
 import useFetch from '../hooks/useFetch';
 import AddIcon from '@mui/icons-material/Add';
 import DeleteIcon from '@mui/icons-material/Delete';
 import capitalizeFirstLetter from './functionalComponents/stringModifications';
 
-const ShoppingList = (shopping) => {
+const ShoppingList = ({shopping}) => {
 
-  let shoppingArr = shopping.shopping
+  const [unit, setUnit] = useState('g');
+  const [name, setName] = useState('')
+  const [count, setCount] = useState("")
+  const [shoppingArr, setShoppingArr] = useState(shopping)
 
-  const [unitType, setUnit] = useState('g');
-
-  const [newItem, setNewItem] = useState({
+  let newItem = {
     "id": 9999,
-    "name": "",
-    "count": "",
+    "name": name,
+    "count": count,
     "status": false
-  })
+  }
 
   const changeUnit = (event) => {
     if (event.target.value !== "u") setUnit(event.target.value);
     else setUnit("");
   };
 
-  const handleName = (e) => {
-    e.preventDefault()
-
+  const handleName = (event) => {
+    event.preventDefault()
+    if (event.target.value !== "") {
+      setName(event.target.value)
+    }
   }
 
-  const handleCount = (e) => {
-    e.preventDefault()
+  const handleCount = (event) => {
+    event.preventDefault()
+    if (event.target.value !== 0) {
+      setCount(event.target.value)
+    }
   }
 
-  const handleSubmit = (e) => {
-    e.preventDefault()
-
+  const handleSubmit = (event) => {
+    event.preventDefault()
+    newItem = {
+      "id": Math.round(Math.random() * 10000),
+      "name": name,
+      "count": `${count}${unit}`,
+      "status": false
+    }
+    setShoppingArr([...shoppingArr, newItem])
+    setName("")
+    setCount("")
+    console.log(shoppingArr)
   }
 
   const handleDelete = (id) => {
-    // setTasksList(tasksList.filter(task => {
-    //   return id !== task.id
-    // }))
+    setShoppingArr(shoppingArr.filter(task => {
+      return id !== task.id
+    }))
   }
 
   return (
@@ -65,7 +79,7 @@ const ShoppingList = (shopping) => {
         >
           <List sx={{width: "100%"}}>
             { shoppingArr.map( (item, index) => (
-              <ListItem key={item.id} sx={{
+              <ListItem key={index} sx={{
                 display: "flex",
                 flexDirection: "row",
                 justifyContent: "space-between",
@@ -98,6 +112,7 @@ const ShoppingList = (shopping) => {
               margin: "20px auto"
             }} 
             onChange={handleName}
+            value={name}
             // value={shoppingItem.name}
           />
           <Box sx={{display: "flex", flexWrap: "wrap", justifyContent: "space-between"}}>
@@ -109,6 +124,7 @@ const ShoppingList = (shopping) => {
                 margin: "10px auto"
               }} 
               onChange={handleCount}
+              value={count}
               // value={shoppingItem.name}
             />
             <Select
@@ -116,7 +132,7 @@ const ShoppingList = (shopping) => {
               id="newRecipe-ingredient-unitCount"
               label="Units"
               defaultValue="g"
-              value={unitType}
+              value={unit}
               onChange={changeUnit}
               sx={{width: 35/100, margin: "10px auto"}}
             >

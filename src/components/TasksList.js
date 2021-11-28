@@ -12,7 +12,6 @@ const TaskList = ({ tasks }) => {
 
   // const tasksInProgress = taskList.filter ( task => task.status === true )
   // const tasksFinished = taskList.filter ( task => task.status === false )
-  const [itemToDelete, setItemToDelete] = useState(null)
   const [tasksList, setTasksList] = useState(tasks)
   const [newTask, setNewTask] = useState({
     id: 9999,
@@ -29,14 +28,17 @@ const TaskList = ({ tasks }) => {
     })
   }
 
-  const handleSubmit = (e) => {
+  const handleSubmit = (e) => { 
     e.preventDefault()
-    setTasksList([...tasksList, newTask])
-    setNewTask({
-      id: 9999,
-      name: "",
-      status: false
-    })
+    if (newTask.name !== "") {
+      setTasksList([...tasksList, newTask])
+      setNewTask({
+        id: 9999,
+        name: "",
+        status: false
+      })
+    }
+
   }
 
   const handleDelete = (id) => {

@@ -11,8 +11,8 @@ import FormControlLabel from '@mui/material/FormControlLabel';
 import FormGroup from '@mui/material/FormGroup';
 import MenuItem from '@mui/material/MenuItem';
 import Menu from '@mui/material/Menu';
+import WeatherInfo from './WeatherInfo'
 
-import WeatherFetch from './WeatherFetch';
 import { useState } from 'react';
 import useFetch from '../hooks/useFetch'
 
@@ -32,29 +32,6 @@ const TopBar = () => {
     setAnchorEl(null);
   };
 
-  // let city = "Gdansk"
-  // let appID = "44cedf7570e6d5a7bb8bdc68dda7c46f"
-  // let units = "metric"
-
-  // const fetchWeather = () => {
-  //   fetch(`http://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${appID}&units=${units}`)
-  //   .then(res => {
-  //     if (!res.ok) {
-  //       throw new Error ("Couldnt grab the data")
-  //     }
-  //     return res.json()
-  //   })
-  //   .then(data => {
-  //     weatherData = data
-  //   })
-  //   .catch(err => {
-  //     console.log(err);
-  //   })
-  //   return weatherData
-  // }
-
-  // const weatherData = fetchWeather()
-
   return (
     <Box sx={{ flexGrow: 1 }}>
       <FormGroup>
@@ -72,7 +49,7 @@ const TopBar = () => {
       <AppBar position="static" >
         <Toolbar>
 
-          {/* {weatherData && <Box>Got the data</Box>} */}
+          <WeatherInfo />
 
 
           {/* <IconButton

@@ -85,6 +85,8 @@ const CreateRecipe = () => {
     console.log(newRecipe)
 
     setName("")
+    setDescription("")
+    setURL("")
     setWeight(0)
     setUnit('g')
     setIngredients([])
